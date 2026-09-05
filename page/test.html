@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test FormSubmit - Étape 4B</title>
+  </head>
+  <body>
+    <h1>Test FormSubmit - Étape 4B</h1>
+
+    <form action="https://formsubmit.co/rijvangabriel@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Test Formulaire - Étape 4B" />
+
+      <div>
+        <label for="nom">Nom</label><br />
+        <input type="text" id="nom" name="nom" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="email">Email</label><br />
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="telephone">Téléphone / WhatsApp</label><br />
+        <input type="tel" id="telephone" name="telephone" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="date_arrivee">Date d'arrivée souhaitée</label><br />
+        <input type="date" id="date_arrivee" name="date_arrivee" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="duree_jours">Durée estimée (jours)</label><br />
+        <input type="number" id="duree_jours" name="duree_jours" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="nb_adultes">Nombre d'adultes</label><br />
+        <input type="number" id="nb_adultes" name="nb_adultes" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="nb_enfants">Nombre d'enfants</label><br />
+        <input type="number" id="nb_enfants" name="nb_enfants" />
+      </div>
+
+      <br />
+
+      <div>
+        <label for="age_enfants">Âge des enfants</label><br />
+        <input type="text" id="age_enfants" name="age_enfants" />
+      </div>
+
+      <br />
+      <div>
+        <label for="message">Message</label><br />
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+
+      <br />
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

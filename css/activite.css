@@ -1,0 +1,156 @@
+/* ==========================================================================
+   PAGE ACTIVITÉS
+   ========================================================================== */
+
+.activites-page {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* --- Section Introduction en haut de la page --- */
+.activites-intro {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px 30px;
+  text-align: center;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.activites-intro h2 {
+  font-size: 1.8rem;
+  color: #f07818; /* Couleur orange Mada Discovery */
+  margin-bottom: 10px;
+}
+
+.activites-intro p {
+  color: #555555;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* --- Grand conteneur global --- */
+.activites-container {
+  background-color: #f2f2f2;
+  border: 1px solid #d0d0d0;
+  border-radius: 16px;
+  padding: 30px 25px;
+  margin-bottom: 40px;
+}
+
+/* Liste verticale des activités */
+.activites-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Carte de chaque activité */
+.activite-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e2e2;
+  border-radius: 14px;
+  padding: 20px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Info à gauche, 2 images à droite */
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.activite-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Texte de l'activité */
+.activite-info h3 {
+  font-size: 1.3rem;
+  color: #111111;
+  margin-bottom: 8px;
+  border-bottom: 2px solid #004fb6; /* Ligne d'accent bleue */
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.activite-desc {
+  color: #555555;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* Bloc des 2 images de l'activité */
+.activite-images-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.img-wrapper {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.06);
+}
+
+/* Menu Nav Actif */
+.navbar a.active {
+  background-color: var(--primary-orange);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: 15px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 850px) {
+  .activite-card {
+    grid-template-columns: 1fr; /* Passage sur une seule colonne */
+  }
+
+  .activite-info {
+    text-align: center;
+  }
+
+  .activite-info h3 {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .activites-intro {
+    padding: 18px 15px;
+  }
+
+  .activites-container {
+    padding: 15px;
+  }
+
+  .activite-images-duo {
+    grid-template-columns: 1fr; /* Images superposées sur très petits écrans */
+  }
+
+  .img-wrapper {
+    height: 180px;
+  }
+}

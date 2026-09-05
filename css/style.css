@@ -1,0 +1,670 @@
+/* ==========================================================================
+   1. VARIABLES GLOBALES & RESET
+   ========================================================================== */
+:root {
+    /* Couleurs principales */
+    --primary-orange: #ff7a00;
+    --primary-orange-hover: #e06b00;
+    --bg-light: #ececec;
+    --bg-card: #ffffff;
+    --text-color: #222222;
+    --text-muted: #666666;
+    
+    /* Couleurs Réseaux / Footer */
+    --whatsapp-green: #4cd964;
+    --facebook-blue: #1877f2;
+    --email-red: #ff0000;
+
+    /* Styling */
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --transition: all 0.3s ease;
+    --max-width: 1100px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+   font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Container global pour centrer le contenu */
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.header {
+    background-color: var(--bg-light);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    
+    /* Propriétés pour fixer la navbar au scroll */
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Garantit que la navbar passe au-dessus des images/cartes */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Petite ombre sous la navbar lors du défilement */
+}
+
+.logo img {
+    max-height: 70px;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.navbar a:hover {
+    color: var(--primary-orange);
+}
+
+
+
+/* ==========================================================================
+   3. BOUTONS RÉUTILISABLES
+   ========================================================================== */
+/* Petit bouton orange (cartes) */
+.btn-voir {
+    display: inline-block;
+    background-color: var(--primary-orange);
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.btn-voir:hover {
+    background-color: var(--primary-orange-hover);
+}
+
+/* Grand bouton principal orange */
+.btn-main {
+    display: inline-block;
+    background-color: var(--primary-orange);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.btn-main:hover {
+    background-color: var(--primary-orange-hover);
+    transform: translateY(-2px);
+}
+
+.center-btn {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* ==========================================================================
+   4. SECTIONS & GRILLES DE CARTES
+   ========================================================================== */
+
+/* Modifier la règle des sections dans style.css */
+section {
+    background-color: #f5f5f5; /* Ou #ffffff selon le fond désiré */
+    border: 1px solid #d0d0d0;  /* La bordure du rectangle */
+    border-radius: 12px;       /* Les coins légèrement arrondis */
+    padding: 25px 20px;        /* L'espace à l'intérieur du rectangle */
+    margin-bottom: 30px;       /* L'espace entre deux blocs */
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #111;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Style de carte standard */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.card-content p {
+    font-size: 0.85rem;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+.card-content .location {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+/* Style spécifique pour cartes avec titre sur l'image (Destinations & Circuits) */
+.card-image {
+    position: relative;
+}
+
+.card-image h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Style spécifique pour cartes sans titre sur l'image (Hébergements & Restaurants) */
+.card-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   5. SECTION ACTIVITÉS
+   ========================================================================== *//* ==========================================================================
+   5. SECTION ACTIVITÉS (Colorée)
+   ========================================================================== */
+.section-activites {
+    background-color: var(--bg-card);
+    padding: 25px 20px;
+    border-radius: var(--border-radius);
+    border: 1px solid #d0d0d0;
+}
+
+.activites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.activite-card {
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+}
+
+.activite-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Palette de couleurs variées pour chaque carte */
+.act-1 { background-color: #ff7a00; } /* Orange chaleureux */
+.act-2 { background-color: #2e7d32; } /* Vert nature */
+.act-3 { background-color: #0288d1; } /* Bleu lagon */
+.act-4 { background-color: #e65100; } /* Rouge/Orange piment */
+.act-5 { background-color: #7b1fa2; } /* Violet tropical */
+.act-6 { background-color: #f57c00; } /* Jaune/Ambré soleil */
+
+/* ==========================================================================
+   6. SECTION À PROPOS (Accueil)
+   ========================================================================== */
+.apropos-container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 20px;
+}
+
+.apropos-logo {
+    flex: 0 0 150px;
+}
+
+.apropos-text p {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.apropos-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   7. SECTION TÉMOIGNAGES
+   ========================================================================== */
+.card-avis {
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-avis p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.avis-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-orange {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-orange);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.author-name {
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   8. FOOTER & CONTACT
+   ========================================================================== */
+.footer {
+    background-color: var(--bg-light);
+    border-top: 1px solid #ddd;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    flex-wrap: wrap;
+}
+
+.btn-social {
+    flex: 1;
+    min-width: 120px;
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.btn-whatsapp { background-color: var(--whatsapp-green); }
+.btn-facebook { background-color: var(--facebook-blue); }
+.btn-email { background-color: var(--email-red); }
+
+.btn-social:hover {
+    opacity: 0.9;
+}
+
+.footer-devis {
+    margin-top: 15px;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE / ADAPTATION ÉCRANS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .navbar ul {
+        justify-content: center;
+    }
+
+    .apropos-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .activites-columns {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   NOUVEAU DESIGN : SECTION RESTAURANTS (GASTRONOMIE)
+   ========================================================================== */
+
+.gastronomy-section {
+  padding: 80px 5%;
+  background-color: #f8f9fa;
+  font-family: inherit;
+}
+
+.gastronomy-section .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.gastronomy-section .section-header h2 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.gastronomy-section .section-subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+/* Grille responsive */
+.gastronomy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
+/* Style des cartes */
+.gastro-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+  position: relative;
+}
+
+.gastro-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Conteneur image avec badge */
+.gastro-media {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.gastro-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gastro-card:hover .gastro-media img {
+  transform: scale(1.08);
+}
+
+/* Badge stylisé sur l'image */
+.gastro-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* Contenu textuel */
+.gastro-details {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.gastro-text h3 {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.gastro-description {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Bouton d'action de la carte */
+.gastro-action-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px 20px;
+  background-color: transparent;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.gastro-action-btn:hover {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+/* Bouton global bas de section */
+.section-footer-action {
+  text-align: center;
+}
+
+.btn-global-explore {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-global-explore:hover {
+  background-color: #2e7d32;
+  transform: scale(1.03);
+}
+
+
+
+/* ==========================================================================
+   FOOTER STANDARDISÉ PROFESSIONNEL
+   ========================================================================== */
+.footer-standard {
+  background-color: #1a1a1a;
+  color: #f4f4f4;
+  padding-top: 60px;
+  margin-top: 60px;
+  border-top: 4px solid var(--primary-orange, #ff7a00);
+}
+
+.footer-container {
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.footer-col .footer-logo {
+  max-height: 60px;
+  margin-bottom: 15px;
+}
+
+.footer-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.footer-col h3 {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 35px;
+  height: 2px;
+  background-color: var(--primary-orange, #ff7a00);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-orange, #ff7a00);
+  padding-left: 5px;
+}
+
+.footer-contact-item {
+  font-size: 0.92rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.footer-contact-item a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-contact-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-action {
+  margin-top: 20px;
+}
+
+.footer-bottom {
+  background-color: #111111;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+  color: #888;
+  border-top: 1px solid #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

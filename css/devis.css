@@ -1,0 +1,540 @@
+
+/* ==========================================================================
+   PAGE DEMANDE DE DEVIS
+   ========================================================================== */
+ 
+.devis-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ 
+/* --------------------------------------------------------------------------
+   BANNIÈRE HERO
+   -------------------------------------------------------------------------- */
+.devis-hero {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1a1a1a;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+ 
+.devis-hero .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+ 
+.devis-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.65) 100%);
+    z-index: 2;
+}
+ 
+.devis-hero-content {
+    position: relative;
+    z-index: 3;
+    padding: 30px 20px;
+    color: #ffffff;
+    max-width: 700px;
+}
+ 
+.devis-hero-content h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+ 
+.devis-hero-content h1 .text-orange {
+    color: var(--primary-orange);
+}
+ 
+.hero-divider {
+    display: inline-block;
+    color: var(--primary-orange);
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+ 
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+ 
+.hero-text {
+    font-size: 0.9rem;
+    color: #f0f0f0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+ 
+/* --------------------------------------------------------------------------
+   INDICATEUR D'ÉTAPES
+   -------------------------------------------------------------------------- */
+.devis-steps {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 16px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+ 
+.step-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 200px;
+}
+ 
+.step-number {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-orange);
+    color: var(--primary-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+ 
+.step-item.is-active .step-number {
+    background-color: var(--primary-orange);
+    color: #ffffff;
+}
+ 
+.step-label {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.step-label strong {
+    font-size: 0.9rem;
+    color: #111111;
+}
+ 
+.step-label small {
+    font-size: 0.78rem;
+    color: #777777;
+}
+ 
+/* --------------------------------------------------------------------------
+   CARTE GLOBALE DU FORMULAIRE
+   -------------------------------------------------------------------------- */
+.devis-card {
+    background-color: #f2f2f2;
+    border: 1px solid #d0d0d0;
+    border-radius: 16px;
+    padding: 35px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+ 
+/* Sections du formulaire */
+.form-section {
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 25px;
+    margin-bottom: 25px;
+}
+ 
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+ 
+.section-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary-orange);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+ 
+.section-heading h3 {
+    font-size: 1.15rem;
+    color: #111111;
+    margin-bottom: 2px;
+}
+ 
+.section-heading p {
+    font-size: 0.85rem;
+    color: #777777;
+}
+ 
+/* Grilles de disposition */
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 20px;
+}
+ 
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+}
+ 
+/* Groupes de champs (Label + Input) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+ 
+.form-group:last-child {
+    margin-bottom: 0;
+}
+ 
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #333333;
+    margin-bottom: 6px;
+}
+ 
+/* Style des Inputs, Selects et Textareas */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="file"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    background-color: #fcfcfc;
+    font-family: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 5px rgba(255, 122, 0, 0.3);
+    background-color: #ffffff;
+}
+ 
+/* Case à cocher unique en ligne (Dates flexibles) */
+.checkbox-inline {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+ 
+.checkbox-inline label {
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+ 
+/* --------------------------------------------------------------------------
+   BLOC DESTINATIONS SOUHAITÉES
+   -------------------------------------------------------------------------- */
+.destinations-block {
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+ 
+.destinations-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+ 
+.destinations-header h4 {
+    font-size: 1rem;
+    color: #111111;
+}
+ 
+.destinations-header p {
+    font-size: 0.82rem;
+    color: #777777;
+}
+ 
+.mini-icon {
+    font-size: 1.2rem;
+}
+ 
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+ 
+.dest-card {
+    position: relative;
+    display: block;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+ 
+.dest-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+ 
+.dest-card img {
+    width: 100%;
+    height: 85px;
+    object-fit: cover;
+}
+ 
+.dest-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 8px 10px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #222222;
+}
+ 
+.dest-caption input[type="checkbox"] {
+    margin-top: 2px;
+    accent-color: var(--primary-orange);
+}
+ 
+.dest-card-other {
+    border: 1px dashed #cccccc;
+    background-color: #fdfdfd;
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+}
+ 
+.dest-caption-other {
+    font-weight: normal;
+    font-size: 0.78rem;
+    color: #444444;
+}
+ 
+.dest-caption-other strong {
+    color: var(--primary-orange);
+}
+ 
+/* --------------------------------------------------------------------------
+   BLOC PRÉFÉRENCES (3 COLONNES)
+   -------------------------------------------------------------------------- */
+.prefs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+ 
+.pref-box {
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+    border-radius: 12px;
+    padding: 18px;
+}
+ 
+.pref-title {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+ 
+.pref-title strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--primary-orange);
+}
+ 
+.pref-title small {
+    font-size: 0.75rem;
+    color: #888888;
+}
+ 
+.checkbox-list,
+.radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+ 
+.checkbox-item,
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    cursor: pointer;
+    color: #333333;
+}
+ 
+.checkbox-item input,
+.radio-item input {
+    accent-color: var(--primary-orange);
+}
+ 
+.checkbox-item-autre {
+    padding-top: 6px;
+    border-top: 1px dashed #dddddd;
+    margin-top: 4px;
+}
+ 
+.budget-box {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 18px;
+}
+ 
+/* --------------------------------------------------------------------------
+   INFORMATIONS COMPLÉMENTAIRES / BAS DE FORMULAIRE
+   -------------------------------------------------------------------------- */
+.bottom-row {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 5px;
+}
+ 
+.file-group {
+    justify-content: center;
+}
+ 
+.notice-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background-color: #eaf7ee;
+    border: 1px solid #c9e9d2;
+    border-radius: 10px;
+    padding: 15px;
+}
+ 
+.notice-box strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #1e7d3a;
+    margin-bottom: 4px;
+}
+ 
+.notice-box p {
+    font-size: 0.78rem;
+    color: #3f6b4a;
+    line-height: 1.4;
+}
+ 
+/* Conteneur et style du bouton de validation */
+.form-submit-container {
+    text-align: center;
+    margin-top: 10px;
+}
+ 
+.btn-submit {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 12px 35px;
+}
+ 
+.btn-submit:hover {
+    opacity: 0.9;
+}
+ 
+.submit-thanks {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #777777;
+}
+ 
+/* --------------------------------------------------------------------------
+   RESPONSIVE
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .dest-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+    .prefs-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .bottom-row {
+        grid-template-columns: 1fr;
+    }
+ 
+    .devis-steps {
+        flex-direction: column;
+    }
+}
+ 
+@media (max-width: 768px) {
+    .devis-card {
+        padding: 20px 15px;
+    }
+ 
+    .form-grid-2,
+    .form-grid-3 {
+        grid-template-columns: 1fr;
+    }
+ 
+    .devis-hero-content h1 {
+        font-size: 1.6rem;
+    }
+}
+ 
+@media (max-width: 550px) {
+    .dest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+ 

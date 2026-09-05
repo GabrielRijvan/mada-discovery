@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mada Discovery - Anfrage erhalten</title>
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- CSS Intégré Spécifique à la page de confirmation -->
+    <style>
+      .confirmation-container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+      }
+
+      .confirmation-card {
+        background-color: #ffffff;
+        border: 1px solid #d0d0d0;
+        border-radius: 20px;
+        padding: 45px 35px;
+        text-align: center;
+        max-width: 650px;
+        width: 100%;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      .icon-check {
+        width: 70px;
+        height: 70px;
+        background-color: #e8f5e9;
+        color: #2e7d32;
+        font-size: 2.2rem;
+        font-weight: bold;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+        border: 2px solid #a5d6a7;
+      }
+
+      .confirmation-card h1 {
+        color: var(--primary-orange);
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+
+      .confirmation-card p {
+        color: #444444;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 25px;
+      }
+
+      .confirmation-details {
+        background-color: #f9f9f9;
+        border: 1px dashed #cccccc;
+        border-radius: 12px;
+        padding: 15px 20px;
+        margin-bottom: 30px;
+        font-size: 0.9rem;
+        color: #666666;
+      }
+
+      .confirmation-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 600px) {
+        .confirmation-card {
+          padding: 30px 20px;
+        }
+
+        .confirmation-buttons {
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/logo/logo.png" alt="Mada Discovery Logo" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="destination.html">Reiseziele</a></li>
+          <li><a href="hebergement.html">Unterkünfte</a></li>
+          <li><a href="activite.html">Aktivitäten</a></li>
+          <li><a href="circuit.html">Rundreisen</a></li>
+          <li><a href="restaurant.html">Restaurants</a></li>
+          <li><a href="apropos.html">Über uns</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="confirmation-container">
+      <section class="confirmation-card">
+        <!-- Icône de validation -->
+        <div class="icon-check">✓</div>
+
+        <h1>Vielen Dank! Anfrage erfolgreich erhalten</h1>
+
+        <p>
+          Wir haben Ihre Anfrage für ein maßgeschneidertes Angebot erfolgreich
+          registriert. Unser Team prüft Ihr Reiseprojekt und wird sich innerhalb
+          von <strong>24 bis 48 Stunden</strong> per E-Mail oder WhatsApp mit
+          einem passenden Vorschlag bei Ihnen melden.
+        </p>
+
+        <div class="confirmation-details">
+          📩 Eine Bestätigungs-E-Mail wurde Ihnen zugesendet. Bitte überprüfen
+          Sie auch Ihren Spam- oder Werbeordner.
+        </div>
+
+        <div class="confirmation-buttons">
+          <a href="../index.html" class="btn-main">Zurück zur Startseite</a>
+          <a
+            href="circuit.html"
+            class="btn-main"
+            style="background-color: #333333"
+            >Unsere Rundreisen entdecken</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

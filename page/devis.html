@@ -1,0 +1,893 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mada Discovery - Anfrage für ein maßgeschneidertes Angebot</title>
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- CSS Spécifique Devis -->
+    <link rel="stylesheet" href="../css/devis.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER & NAVIGATION ================= -->
+    <header class="header">
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../images/logo/logo.png" alt="Mada Discovery Logo" />
+        </a>
+      </div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="destination.html">Reiseziele</a></li>
+          <li><a href="hebergement.html">Unterkünfte</a></li>
+          <li><a href="activite.html">Aktivitäten</a></li>
+          <li><a href="circuit.html">Rundreisen</a></li>
+          <li><a href="restaurant.html">Restaurants</a></li>
+          <li><a href="apropos.html">Über uns</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="devis-container">
+      <!-- ================= BANNIÈRE HERO ================= -->
+      <section class="devis-hero">
+        <img
+          src="../images/commun/01.jpg"
+          alt="Landschaft von Madagaskar"
+          class="hero-bg"
+        />
+        <div class="hero-overlay"></div>
+        <div class="devis-hero-content">
+          <h1>
+            Anfrage für ein
+            <span class="text-orange">maßgeschneidertes</span> Angebot
+          </h1>
+          <span class="hero-divider">✦ ✦ ✦</span>
+          <p class="hero-subtitle">
+            Erschaffen Sie die Reise Ihrer Träume in Madagaskar.
+          </p>
+          <p class="hero-text">
+            Füllen Sie dieses Formular aus und erhalten Sie einen persönlichen,
+            kostenlosen und unverbindlichen Vorschlag.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= INDICATEUR D'ÉTAPES ================= -->
+      <section class="devis-steps">
+        <div class="step-item is-active">
+          <span class="step-number">1</span>
+          <span class="step-label">
+            <strong>Ihre Kontaktdaten</strong>
+            <small>Wer sind Sie?</small>
+          </span>
+        </div>
+        <div class="step-item">
+          <span class="step-number">2</span>
+          <span class="step-label">
+            <strong>Ihr Reiseprojekt</strong>
+            <small>Daten, Reisende, Reiseziele</small>
+          </span>
+        </div>
+        <div class="step-item">
+          <span class="step-number">3</span>
+          <span class="step-label">
+            <strong>Ihre Präferenzen</strong>
+            <small>Aktivitäten, Unterkünfte, Budget</small>
+          </span>
+        </div>
+        <div class="step-item">
+          <span class="step-number">4</span>
+          <span class="step-label">
+            <strong>Abschluss</strong>
+            <small>Zusätzliche Informationen</small>
+          </span>
+        </div>
+      </section>
+
+      <!-- ================= CARTE DU FORMULAIRE ================= -->
+      <section class="devis-card">
+        <!-- FORMULAIRE FORMSUBMIT -->
+        <form
+          target="_blank"
+          action="https://formsubmit.co/rijvangabriel@gmail.com"
+          method="POST"
+          class="devis-form"
+          enctype="multipart/form-data"
+        >
+          <!-- Options de configuration FormSubmit -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="Neue Angebotsanfrage - Mada Discovery"
+          />
+          <input type="hidden" name="_captcha" value="false" />
+          <!-- Redirection vers devisrecu.html après validation -->
+          <!-- <input type="hidden" name="_next" value="https://ton-domaine.com/page/devisrecu.html"> -->
+          <input
+            type="hidden"
+            name="_next"
+            value="https://madaentdeckung.vercel.app/page/devisrecu.html"
+          />
+
+          <!-- SECTION 1 : COORDONNÉES -->
+          <div class="form-section">
+            <div class="section-header">
+              <div class="section-icon">I</div>
+              <div class="section-heading">
+                <h3>1. Ihre Kontaktdaten</h3>
+                <p>Um Sie besser kennenzulernen</p>
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="prenom">Vorname *</label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  placeholder="Ihr Vorname"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="nom">Nachname *</label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  placeholder="Ihr Nachname"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">E-Mail-Adresse *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="beispiel@email.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="telephone">Telefon / WhatsApp *</label>
+                <input
+                  type="tel"
+                  id="telephone"
+                  name="telephone"
+                  placeholder="+49 151 12345678"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="pays">Wohnsitzland *</label>
+                <select id="pays" name="pays" required>
+                  <option value="">Wählen Sie Ihr Land</option>
+                  <option value="France">Frankreich</option>
+                  <option value="Belgique">Belgien</option>
+                  <option value="Suisse">Schweiz</option>
+                  <option value="Canada">Kanada</option>
+                  <option value="Madagascar">Madagaskar</option>
+                  <option value="Allemagne">Deutschland</option>
+                  <option value="Autre">Anderes</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="langue">Bevorzugte Sprache</label>
+                <select id="langue" name="langue_preference">
+                  <option value="Allemand">Deutsch</option>
+                  <option value="Français">Französisch</option>
+                  <option value="Anglais">Englisch</option>
+                  <option value="Italien">Italienisch</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!-- SECTION 2 : PROJET DE VOYAGE -->
+          <div class="form-section">
+            <div class="section-header">
+              <div class="section-icon">II</div>
+              <div class="section-heading">
+                <h3>2. Ihr Reiseprojekt</h3>
+                <p>Erzählen Sie uns von Ihrem idealen Aufenthalt</p>
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="date-arrivee">Gewünschtes Anreisedatum *</label>
+                <input
+                  type="date"
+                  id="date-arrivee"
+                  name="date_arrivee"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="date-depart">Gewünschtes Abreisedatum *</label>
+                <input
+                  type="date"
+                  id="date-depart"
+                  name="date_depart"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="duree">Geschätzte Dauer (in Tagen) *</label>
+                <input
+                  type="number"
+                  id="duree"
+                  name="duree_jours"
+                  min="1"
+                  placeholder="Bsp.: 14 Tage"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label for="nb-voyageurs">Gesamtzahl der Reisenden *</label>
+                <input
+                  type="number"
+                  id="nb-voyageurs"
+                  name="nb_voyageurs"
+                  min="1"
+                  placeholder="Bsp.: 2"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="adultes">Erwachsene (18 Jahre und älter) *</label>
+                <input
+                  type="number"
+                  id="adultes"
+                  name="nb_adultes"
+                  min="1"
+                  value="2"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="enfants">Kinder (unter 18 Jahren)</label>
+                <input
+                  type="number"
+                  id="enfants"
+                  name="nb_enfants"
+                  min="0"
+                  value="0"
+                  placeholder="Bsp.: 0"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="age-enfants"
+                >Alter der Kinder (falls zutreffend)</label
+              >
+              <input
+                type="text"
+                id="age-enfants"
+                name="age_enfants"
+                placeholder="Bsp.: 5 Jahre, 12 Jahre"
+              />
+            </div>
+
+            <div class="form-group checkbox-inline">
+              <input
+                type="checkbox"
+                id="dates-flexibles"
+                name="dates_flexibles"
+                value="Oui"
+              />
+              <label for="dates-flexibles"
+                >Meine Reisedaten sind flexibel</label
+              >
+            </div>
+
+            <!-- DESTINATIONS SOUHAITÉES -->
+            <div class="destinations-block">
+              <div class="destinations-header">
+                <span class="mini-icon"></span>
+                <div>
+                  <h4>Gewünschte Reiseziele</h4>
+                  <p>Welche Regionen oder Orte möchten Sie entdecken?</p>
+                </div>
+              </div>
+
+              <div class="dest-grid">
+                <label class="dest-card">
+                  <img
+                    src="../images/ville/antananarivo/01.jpg"
+                    alt="Antananarivo"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Antananarivo et environs"
+                    />
+                    <span>Antananarivo und Umgebung</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img
+                    src="../images/circuit/Parc Ankarana/01.jpg"
+                    alt="Parc Ankarana"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Parc Ankarana"
+                    />
+                    <span>Ankarana-Park</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img src="../images/circuit/Nosy Be/01.jpg" alt="Nosy Be" />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Nosy Be"
+                    />
+                    <span>Nosy Be</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img
+                    src="../images/circuit/Montagne d'Ambre/01.jpg"
+                    alt="Montagne d'Ambre"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Montagne d'Ambre"
+                    />
+                    <span>Montagne d'Ambre</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img
+                    src="../images/circuit/Mer d'Émeraude/01.jpg"
+                    alt="Mer d'Émeraude"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Mer d'Émeraude"
+                    />
+                    <span>Smaragdmeer (Mer d'Émeraude)</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img
+                    src="../images/circuit/Trois Bais/01.jpg"
+                    alt="Trois Baies"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Trois Baies"
+                    />
+                    <span>Die drei Buchten (Trois Baies)</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img
+                    src="../images/circuit/Tsingy Rouge/01.jpg"
+                    alt="Tsingy Rouge"
+                  />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Tsingy Rouge"
+                    />
+                    <span>Tsingy Rouge</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img src="../images/circuit/Antalaha/01.jpg" alt="Antalaha" />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Antalaha"
+                    />
+                    <span>Antalaha</span>
+                  </div>
+                </label>
+
+                <label class="dest-card">
+                  <img src="../images/circuit/Andapa/01.jpg" alt="Andapa" />
+                  <div class="dest-caption">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Andapa"
+                    />
+                    <span>Andapa</span>
+                  </div>
+                </label>
+
+                <label class="dest-card dest-card-other">
+                  <div class="dest-caption dest-caption-other">
+                    <input
+                      type="checkbox"
+                      name="destinations[]"
+                      value="Autre"
+                    />
+                    <span
+                      ><strong>Anderes Reiseziel</strong><br />Geben Sie es im
+                      Feld unten an</span
+                    >
+                  </div>
+                </label>
+              </div>
+
+              <div class="form-group" style="margin-top: 15px">
+                <label for="autres-destinations"
+                  >Geben Sie weitere Reiseziele oder zu besuchende Orte
+                  an</label
+                >
+                <input
+                  type="text"
+                  id="autres-destinations"
+                  name="autres_destinations"
+                  placeholder="Bsp.: Toamasina, Morondava, Isalo-Nationalpark usw."
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 3 : PRÉFÉRENCES & ENVIES -->
+          <div class="form-section">
+            <div class="section-header">
+              <div class="section-icon">III</div>
+              <div class="section-heading">
+                <h3>3. Ihre Präferenzen & Wünsche</h3>
+                <p>
+                  Helfen Sie uns, die Reise zu gestalten, die zu Ihnen passt
+                </p>
+              </div>
+            </div>
+
+            <div class="prefs-grid">
+              <!-- THÉMATIQUES -->
+              <div class="pref-box">
+                <div class="pref-title">
+                  <span class="mini-icon">T</span>
+                  <div>
+                    <strong>Reisethemen</strong>
+                    <small>(mehrere Auswahlen möglich)</small>
+                  </div>
+                </div>
+                <div class="checkbox-list">
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Aventure et Parcs nationaux"
+                    />
+                    Abenteuer & Nationalparks</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Aventure et Randonnée"
+                    />
+                    Abenteuer & Wandern</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Plages et Détente balnéaire"
+                    />
+                    Strände & Badeurlaub</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Culture et Gastronomie"
+                    />
+                    Kultur & Gastronomie</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Faune et Observation des animaux"
+                    />
+                    Tierwelt & Tierbeobachtung</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Séjour romantique / Lune de miel"
+                    />
+                    Romantischer Aufenthalt / Flitterwochen</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Voyage en famille"
+                    />
+                    Familienreise</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Wellness et Bien-être"
+                    />
+                    Wellness & Wohlbefinden</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="thematique[]"
+                      value="Plongée / Snorkeling"
+                    />
+                    Tauchen / Schnorcheln</label
+                  >
+                  <label class="checkbox-item checkbox-item-autre">
+                    <input type="checkbox" name="thematique[]" value="Autre" />
+                    Sonstiges (bitte angeben)
+                  </label>
+                </div>
+              </div>
+
+              <!-- HÉBERGEMENT -->
+              <div class="pref-box">
+                <div class="pref-title">
+                  <span class="mini-icon">H</span>
+                  <div>
+                    <strong>Gewünschte Unterkunft</strong>
+                    <small>(mehrere Auswahlen möglich)</small>
+                  </div>
+                </div>
+                <div class="checkbox-list">
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Hotel economique"
+                    />
+                    Günstiges Hotel</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Hotel standard"
+                    />
+                    Standardhotel</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Hotel de charme / Confort"
+                    />
+                    Charmehotel / Komfort</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Hotel de luxe / Premium"
+                    />
+                    Luxushotel / Premium</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Lodge / Ecolodge"
+                    />
+                    Lodge / Ecolodge</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Bungalow / Villa"
+                    />
+                    Bungalow / Villa</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Maison d'hotes"
+                    />
+                    Gästehaus (Maison d'hôtes)</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="hebergement[]"
+                      value="Pas de preference"
+                    />
+                    Keine Präferenz</label
+                  >
+                </div>
+              </div>
+
+              <!-- TRANSPORT + BUDGET -->
+              <div class="pref-box">
+                <div class="pref-title">
+                  <span class="mini-icon">T</span>
+                  <div>
+                    <strong>Transport & Fortbewegung</strong>
+                    <small>(mehrere Auswahlen möglich)</small>
+                  </div>
+                </div>
+                <div class="checkbox-list">
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Transferts aeroport"
+                    />
+                    Flughafenstransfers</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Vehicule prive avec chauffeur"
+                    />
+                    Privates Fahrzeug mit Fahrer</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Location de voiture"
+                    />
+                    Mietwagen</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Vols interieurs"
+                    />
+                    Inlandsflüge</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Bateau / Bateau rapide"
+                    />
+                    Boot / Schnellboot</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Transport local"
+                    />
+                    Lokaler Transport</label
+                  >
+                  <label class="checkbox-item"
+                    ><input
+                      type="checkbox"
+                      name="transport[]"
+                      value="Pas de preference"
+                    />
+                    Keine Präferenz</label
+                  >
+                </div>
+
+                <div class="budget-box">
+                  <div class="pref-title">
+                    <span class="mini-icon">€</span>
+                    <div>
+                      <strong>Geschätztes Budget pro Person</strong>
+                      <small>(ohne internationalen Flug)</small>
+                    </div>
+                  </div>
+                  <div class="radio-list">
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="Moins de 1000 euros"
+                      />
+                      Weniger als 1.000 €</label
+                    >
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="1000 a 1500 euros"
+                      />
+                      1.000 € – 1.500 €</label
+                    >
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="1500 a 2500 euros"
+                      />
+                      1.500 € – 2.500 €</label
+                    >
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="2500 a 4000 euros"
+                      />
+                      2.500 € – 4.000 €</label
+                    >
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="Plus de 4000 euros"
+                      />
+                      Mehr als 4.000 €</label
+                    >
+                    <label class="radio-item"
+                      ><input
+                        type="radio"
+                        name="budget_par_personne"
+                        value="Je ne sais pas encore"
+                        checked
+                      />
+                      Ich weiß es noch nicht</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECTION 4 : INFORMATIONS COMPLÉMENTAIRES -->
+          <div class="form-section">
+            <div class="section-header">
+              <div class="section-icon">IV</div>
+              <div class="section-heading">
+                <h3>4. Zusätzliche Informationen</h3>
+                <p>Ihre speziellen Wünsche</p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Genaue Angaben oder Sonderwünsche</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Geben Sie Sonderwünsche, Ernährungseinschränkungen, Mobilität, besondere Anlässe usw. an."
+              ></textarea>
+            </div>
+
+            <div class="bottom-row">
+              <div class="form-group file-group">
+                <label for="fichier">Datei hinzufügen (optional)</label>
+                <input type="file" id="fichier" name="attachment" />
+              </div>
+
+              <div class="notice-box">
+                <span class="mini-icon">🛡️</span>
+                <div>
+                  <strong>Ihre Anfrage ist kostenlos und unverbindlich</strong>
+                  <p>
+                    Nach Eingang Ihrer Anfrage wird unser Team Ihr Projekt
+                    prüfen und Sie umgehend mit einem persönlichen Vorschlag
+                    kontaktieren.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOUTON D'ENVOI -->
+          <div class="form-submit-container">
+            <button type="submit" class="btn-main btn-submit">
+              ➤ Meine Angebotsanfrage senden
+            </button>
+            <p class="submit-thanks">Wir danken Ihnen für Ihr Vertrauen!</p>
+          </div>
+        </form>
+      </section>
+
+      <!-- BOUTON RETOUR ACCUEIL -->
+      <div class="center-btn" style="margin-top: 20px; margin-bottom: 30px">
+        <a href="../index.html" class="btn-main">Zurück zur Startseite</a>
+      </div>
+    </main>
+
+    <!-- ================= FOOTER STANDARD ================= -->
+    <footer class="footer-standard">
+      <div class="footer-container">
+        <!-- Col 1 : À propos / Logo -->
+        <div class="footer-col">
+          <img
+            src="../images/logo/logo2.png"
+            alt="Mada Discovery Logo"
+            class="footer-logo"
+          />
+          <p class="footer-desc">
+            Ihr Tor zu einem authentischen Madagaskar. Maßgeschneiderte Reisen,
+            Rundreisen, Unterkünfte und unvergessliche Erlebnisse.
+          </p>
+        </div>
+
+        <!-- Col 2 : Liens rapides -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="destination.html">Reiseziele</a></li>
+            <li><a href="hebergement.html">Unterkünfte</a></li>
+            <li><a href="activite.html">Aktivitäten</a></li>
+            <li><a href="circuit.html">Rundreisen</a></li>
+            <li><a href="restaurant.html">Restaurants</a></li>
+            <li><a href="apropos.html">Über uns</a></li>
+            <li><a href="../index.html">Startseite</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 : Contact & Devis -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i> Madagaskar
+          </p>
+          <p class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i> WhatsApp:
+            <a
+              href="https://wa.me/261374844889"
+              target="_blank"
+              rel="noopener noreferrer"
+              >+261 37 48 448 89</a
+            >
+          </p>
+          <p class="footer-contact-item">
+            <i class="fas fa-envelope"></i> E-Mail:
+            <a href="mailto:waynealexandrine0@gmail.com"
+              >waynealexandrine0@gmail.com</a
+            >
+          </p>
+          <div class="footer-action">
+            <a href="devis.html" class="btn-main">Angebot anfordern</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mada Discovery. Alle Rechte vorbehalten.</p>
+      </div>
+    </footer>
+
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>
