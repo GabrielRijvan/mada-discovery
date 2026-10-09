@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mada Discovery - Restaurants</title>
+    <title>Mada Discovery - Restaurants & Gastronomie</title>
     <!-- CSS Global -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- CSS Commun aux catégories -->
     <link rel="stylesheet" href="../css/categorie.css" />
+    <!-- CSS Spécifique Page Restaurants Vendeuse -->
+    <link rel="stylesheet" href="../css/restaurant-page.css" />
   </head>
   <body>
     <!-- ================= HEADER & NAVIGATION ================= -->
@@ -30,8 +32,32 @@
     </header>
 
     <main class="category-page">
+      <!-- ================= BANNIÈRE HERO COMMERCIALE ================= -->
+      <section class="restaurant-hero-vendeur">
+        <div class="hero-vendeur-bg">
+          <img src="../images/restaurant/Authentische madagassische Küche/01.jpg" alt="Gastronomie Madagaskar" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-vendeur-content">
+          <span class="badge-or">✨ Die kulinarische Kunst Madagaskars</span>
+          <h1>Erleben Sie exquisite <span class="text-orange">Aromen</span> & Genüsse</h1>
+          <p>
+            Entdecken Sie traditionelle madagassische Spezialitäten, internationale Spitzenküche 
+            und romantische Private Dining-Erlebnisse für unvergessliche Momente.
+          </p>
+          <div class="hero-vendeur-cta">
+            <a href="devis.html" class="btn-main btn-glow">Kulinarische Reise anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GRILLE DES RESTAURANTS ================= -->
       <section class="category-container">
         <h2>Unsere empfohlenen Restaurants</h2>
+        <p class="section-intro-text">
+          Von authentischen lokalen Rezepten bis hin zu exklusiven, raffinierten Menüs – 
+          genießen Sie die Vielfalt und den Geschmack von Madagaskar.
+        </p>
 
         <div class="cards-grid">
           <!-- Carte 1 -->
@@ -41,12 +67,13 @@
                 src="../images/restaurant/Authentische madagassische Küche/01.jpg"
                 alt="Authentische madagassische Küche"
               />
+              <span class="card-tag-badge">Tradition</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
                 <h3>Authentische madagassische Küche</h3>
                 <span class="location"
-                  >Entdecken Sie die echten Aromen Madagaskars Probieren Sie
+                  >Entdecken Sie die echten Aromen Madagaskars. Probieren Sie
                   traditionelle madagassische Spezialitäten, zubereitet mit
                   lokalen Produkten wie Reis, Fisch, Fleisch und Gewürzen – nach
                   Rezepten, die von Generation zu Generation weitergegeben
@@ -68,12 +95,13 @@
                 src="../images/restaurant/Internationale & Exklusive Gastronomie/01.jpg"
                 alt="Internationale & Exklusive Gastronomie"
               />
+              <span class="card-tag-badge">Exklusiv</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
                 <h3>Internationale & Exklusive Gastronomie</h3>
                 <span class="location"
-                  >Die perfekte Verbindung zwischen Madagaskar und der Welt
+                  >Die perfekte Verbindung zwischen Madagaskar und der Welt.
                   Erleben Sie eine raffinierte Küche, die lokale Zutaten mit
                   internationalen Einflüssen verbindet – ideal für Reisende, die
                   Qualität und Komfort suchen.
@@ -94,12 +122,13 @@
                 src="../images/restaurant/Romantische Restaurants & Private Erlebnisse/01.jpg"
                 alt="Romantische Restaurants & Private Erlebnisse"
               />
+              <span class="card-tag-badge">Romantik</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
                 <h3>Romantische Restaurants & Private Erlebnisse</h3>
                 <span class="location"
-                  >Schaffen Sie unvergessliche Momente zu zweit Private
+                  >Schaffen Sie unvergessliche Momente zu zweit. Private
                   Abendessen, eine romantische Atmosphäre und außergewöhnliche
                   Orte für Paare, die ein besonderes Erlebnis suchen.</span
                 >
@@ -114,7 +143,7 @@
         </div>
 
         <!-- Bouton Retour -->
-        <div class="center-btn">
+        <div class="center-btn" style="margin-top: 40px;">
           <a href="../index.html" class="btn-main">Zurück zur Startseite</a>
         </div>
       </section>
