@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mada Discovery - Unterkünfte</title>
+    <title>Mada Discovery - Exklusive Unterkünfte & Lodges in Madagaskar</title>
     <!-- CSS Global -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- CSS Commun aux catégories -->
     <link rel="stylesheet" href="../css/categorie.css" />
+    <!-- CSS Spécifique Page Hébergements Vendeuse -->
+    <link rel="stylesheet" href="../css/hebergement.css" />
   </head>
   <body>
     <!-- ================= HEADER & NAVIGATION ================= -->
@@ -30,8 +32,32 @@
     </header>
 
     <main class="category-page">
+      <!-- ================= BANNIÈRE HERO COMMERCIALE ================= -->
+      <section class="hebergement-hero-vendeur">
+        <div class="hero-vendeur-bg">
+          <img src="../images/hebergement/Royal Sakalava/01.jpg" alt="Traumhafte Unterkunft Madagaskar" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-vendeur-content">
+          <span class="badge-or">✨ Handverlesene Hotels & Lodges</span>
+          <h1>Erleben Sie Komfort im Herzen der <span class="text-orange">Wildnis</span></h1>
+          <p>
+            Von charmanten Lodges im Regenwald bis hin zu luxuriösen Strandresorts – 
+            wir wählen die perfekten Unterkünfte für eine unvergessliche und erholsame Reise aus.
+          </p>
+          <div class="hero-vendeur-cta">
+            <a href="devis.html" class="btn-main btn-glow">Maßgeschneidertes Angebot anfordern</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GRILLE DES HÉBERGEMENTS ================= -->
       <section class="category-container">
         <h2>Unsere empfohlenen Unterkünfte</h2>
+        <p class="section-intro-text">
+          Jede Unterkunft wird sorgfältig geprüft, um Ihnen absolute Sicherheit, erstklassigen Service 
+          und eine authentische Atmosphäre zu garantieren.
+        </p>
 
         <div class="cards-grid">
           <!-- Carte 1 -->
@@ -41,6 +67,7 @@
                 src="../images/hebergement/Royal Sakalava/01.jpg"
                 alt="Royal Sakalava"
               />
+              <span class="card-tag-badge">Direkt am Meer</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -60,8 +87,9 @@
             <div class="card-img-wrapper">
               <img
                 src="../images/hebergement/Hotel de la Poste/01.jpg"
-                alt="DS Hotel"
+                alt="Hotel de la Poste"
               />
+              <span class="card-tag-badge">Historisch & Zentral</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -81,6 +109,7 @@
                 src="../images/hebergement/Nature Lodge/01.jpg"
                 alt="Nature Lodge"
               />
+              <span class="card-tag-badge">Eco-Lodge</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -100,6 +129,7 @@
                 src="../images/hebergement/Ankarana Lodge/01.jpg"
                 alt="Ankarana Lodge"
               />
+              <span class="card-tag-badge">Natur & Abenteuer</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -121,6 +151,7 @@
                 src="../images/hebergement/VOI Andilana Beach Resort/01.jpg"
                 alt="VOI Andilana Beach Resort"
               />
+              <span class="card-tag-badge">Luxus Resort</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -142,6 +173,7 @@
                 src="../images/hebergement/Marojejy National Park Camp/01.jpg"
                 alt="Marojejy National Park Camp"
               />
+              <span class="card-tag-badge">Wildnis & Trekking</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -163,6 +195,7 @@
                 src="../images/hebergement/Hotel Vitasoa/01.jpg"
                 alt="Hotel Vitasoa"
               />
+              <span class="card-tag-badge">Vanille-Küste</span>
             </div>
             <div class="card-content-standard">
               <div class="card-info">
@@ -177,7 +210,7 @@
         </div>
 
         <!-- Bouton Retour -->
-        <div class="center-btn">
+        <div class="center-btn" style="margin-top: 40px;">
           <a href="../index.html" class="btn-main">Zurück zur Startseite</a>
         </div>
       </section>
