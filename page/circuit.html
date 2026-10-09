@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mada Discovery - Rundreisen</title>
+    <title>Mada Discovery - Unvergessliche Rundreisen & Expeditionen</title>
     <!-- CSS Global -->
     <link rel="stylesheet" href="../css/style.css" />
     <!-- CSS Commun aux catégories -->
     <link rel="stylesheet" href="../css/categorie.css" />
+    <!-- CSS Spécifique Page Circuits Vendeuse -->
+    <link rel="stylesheet" href="../css/circuit-page.css" />
   </head>
   <body>
     <!-- ================= HEADER & NAVIGATION ================= -->
@@ -30,8 +32,32 @@
     </header>
 
     <main class="category-page">
+      <!-- ================= BANNIÈRE HERO COMMERCIALE ================= -->
+      <section class="circuit-hero-vendeur">
+        <div class="hero-vendeur-bg">
+          <img src="../images/circuit/Montagne d'Ambre/01.jpg" alt="Rundreisen Madagaskar" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-vendeur-content">
+          <span class="badge-or">✨ Entdecken Sie das wahre Madagaskar</span>
+          <h1>Unvergessliche <span class="text-orange">Rundreisen</span> & Abenteuer</h1>
+          <p>
+            Von mystischen Regenwäldern und spektakulären Tsingy bis hin zu traumhaften Traumstränden – 
+            erleben Sie maßgeschneiderte Expeditionen voller Magie und Authentizität.
+          </p>
+          <div class="hero-vendeur-cta">
+            <a href="devis.html" class="btn-main btn-glow">Maßgeschneiderte Reise anfragen</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= GRILLE DES CIRCUITS ================= -->
       <section class="category-container">
         <h2>Unsere angebotenen Rundreisen</h2>
+        <p class="section-intro-text">
+          Jede Rundreise wird sorgfältig konzipiert, um Ihnen die spektakulärsten Naturwunder 
+          und unvergesslichen Begegnungen der Insel näherzubringen.
+        </p>
 
         <div class="cards-grid">
           <!-- Carte 1 -->
@@ -70,7 +96,7 @@
             <div class="card-content-circuit">
               <p class="card-description">
                 Erleben Sie einen unvergesslichen Tagesausflug zum berühmten
-                Smaragdmeer. Das kristallklare, türkisfarbene Wasser, die weißen
+                Smaragdmeer. Das kristallklare, türkisarbene Wasser, die weißen
                 Sandstrände und die friedliche Atmosphäre machen diesen Ort zu
                 einem wahren Paradies. Genießen Sie eine Bootsfahrt, schnorcheln
                 Sie zwischen bunten Korallen und entspannen Sie in einer
@@ -210,7 +236,7 @@
         </div>
 
         <!-- Bouton Retour -->
-        <div class="center-btn">
+        <div class="center-btn" style="margin-top: 40px;">
           <a href="../index.html" class="btn-main">Zurück zur Startseite</a>
         </div>
       </section>
