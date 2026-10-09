@@ -1,0 +1,109 @@
+/* ==========================================================================
+   STYLE SPÉCIFIQUE PAGE CIRCUITS (VENDEUR)
+   ========================================================================== */
+
+/* Bannière Hero Vendeur */
+.circuit-hero-vendeur {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a1a1a;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-vendeur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-vendeur-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 5s ease;
+}
+
+.circuit-hero-vendeur:hover .hero-vendeur-bg img {
+  transform: scale(1);
+}
+
+.circuit-hero-vendeur .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 2;
+}
+
+.hero-vendeur-content {
+  position: relative;
+  z-index: 3;
+  padding: 35px 20px;
+  color: #ffffff;
+  max-width: 750px;
+}
+
+.badge-or {
+  display: inline-block;
+  background: rgba(255, 122, 0, 0.95);
+  color: #ffffff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.hero-vendeur-content h1 {
+  font-size: 2.3rem;
+  margin-bottom: 12px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.25;
+}
+
+.hero-vendeur-content h1 .text-orange {
+  color: var(--primary-orange);
+}
+
+.hero-vendeur-content p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  color: #f2f2f2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+}
+
+.hero-vendeur-cta .btn-main {
+  padding: 12px 30px;
+  font-size: 1.02rem;
+}
+
+.section-intro-text {
+  text-align: center;
+  color: #555555;
+  font-size: 0.98rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .hero-vendeur-content h1 {
+    font-size: 1.8rem;
+  }
+}

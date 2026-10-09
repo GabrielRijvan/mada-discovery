@@ -1,0 +1,237 @@
+/* ==========================================================================
+   STYLE SPÉCIFIQUE PAGE D'ACCUEIL (VENDEUR / HERO SECTION)
+   ========================================================================== */
+
+/* Hero Commercial / Vendeur */
+.hero-commercial {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #1a1a1a;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-commercial-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-commercial-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+  transition: transform 6s ease;
+}
+
+.hero-commercial:hover .hero-commercial-bg img {
+  transform: scale(1);
+}
+
+.hero-commercial .hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+  z-index: 2;
+}
+
+.hero-commercial-content {
+  position: relative;
+  z-index: 3;
+  padding: 40px 20px;
+  color: #ffffff;
+  max-width: 800px;
+}
+
+.hero-badge-top {
+  display: inline-block;
+  background: rgba(255, 122, 0, 0.9);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hero-commercial-content h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.hero-commercial-content h1 .text-orange {
+  color: var(--primary-orange);
+}
+
+.hero-commercial-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #f1f1f1;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  line-height: 1.6;
+}
+
+.hero-cta-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.btn-secondary-hero {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary-hero:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.btn-glow {
+  animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 0 0 rgba(255, 122, 0, 0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(255, 122, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 122, 0, 0); }
+}
+
+.hero-reassurance-chips {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+  color: #e0e0e0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+
+/* Section Avantages / Reassurance */
+.home-features {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 16px;
+  padding: 40px 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features-header h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.features-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-box {
+  background: #fdfdfd;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.feature-icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.feature-box h3 {
+  font-size: 1.15rem;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+.feature-box p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Bannière de conversion intermédiaire */
+.banner-conversion {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  border-radius: 16px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+  margin: 40px 0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.banner-conversion-content h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.banner-conversion-content p {
+  color: #cccccc;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-commercial-content h1 {
+    font-size: 2rem;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+  }
+  .btn-secondary-hero, .hero-cta-group .btn-main {
+    width: 100%;
+  }
+}
