@@ -3,8 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mada Discovery - Startseite</title>
+    <title>Mada Discovery - Ihr Tor zu einem authentischen Madagaskar</title>
+    <!-- CSS Global et CSS Spécifique Accueil -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <!-- ================= HEADER & NAVIGATION ================= -->
@@ -26,7 +28,57 @@
       </nav>
     </header>
 
-    <main>
+    <main class="home-main">
+      <!-- ================= SECTION HERO : IMPACT & CONVERSION ================= -->
+      <section class="hero-commercial">
+        <div class="hero-commercial-bg">
+          <img src="images/circuit/Nosy Be/01.jpg" alt="Madagaskar Traumlandschaft" />
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-commercial-content">
+          <span class="hero-badge-top">✨ Maßgeschneiderte Reisen & Expeditionen</span>
+          <h1>Entdecken Sie Madagaskar <span class="text-orange">Wie nie zuvor</span></h1>
+          <p>
+            Erleben Sie unvergessliche Rundreisen, luxuriöse Unterkünfte und authentische Abenteuer. 
+            Wir planen Ihre Traumreise nach Ihren Wünschen und Ihrem Budget.
+          </p>
+          <div class="hero-cta-group">
+            <a href="page/devis.html" class="btn-main btn-glow">Kostenloses Angebot anfordern</a>
+            <a href="page/circuit.html" class="btn-secondary-hero">Unsere Rundreisen ansehen</a>
+          </div>
+          <div class="hero-reassurance-chips">
+            <span>✔ 100% Maßgeschneidert</span>
+            <span>✔ Lokale Experten</span>
+            <span>✔ 24/7 Unterstützung</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION : POURQUOI CHOISIR MADA DISCOVERY ================= -->
+      <section class="home-features">
+        <div class="features-header">
+          <h2>Warum Mada Discovery?</h2>
+          <p>Exzellenz, Leidenschaft und Sicherheit für Ihre Entdeckungsreise</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature-box">
+            <div class="feature-icon">🗺️</div>
+            <h3>Maßgeschneiderte Routen</h3>
+            <p>Jede Reise wird individuell an Ihre Wünsche, Interessen und Ihr Reisetempo angepasst.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🏨</div>
+            <h3>Ausgewählte Unterkünfte</h3>
+            <p>Von charmanten Lodges bis zu luxuriösen Strandresorts – für optimalen Komfort.</p>
+          </div>
+          <div class="feature-box">
+            <div class="feature-icon">🚗</div>
+            <h3>Sicherer Transport</h3>
+            <p>Privatfahrzeuge mit professionellen Fahrern und erfahrenen lokalen Reiseleitern.</p>
+          </div>
+        </div>
+      </section>
+
       <!-- ================= SECTION 1 : DESTINATIONS PRINCIPALES ================= -->
       <section class="section-destinations">
         <h2>Hauptreiseziele</h2>
@@ -77,62 +129,6 @@
         <div class="center-btn">
           <a href="page/destination.html" class="btn-main"
             >Alle Reiseziele entdecken</a
-          >
-        </div>
-      </section>
-
-      <!-- ================= SECTION 2 : HÉBERGEMENTS ================= -->
-      <section class="section-hebergements">
-        <h2>Unterkünfte</h2>
-        <div class="cards-grid">
-          <!-- Carte Blue Bird -->
-          <article class="card">
-            <img
-              src="images/hebergement/Royal Sakalava/01.jpg"
-              alt="Blue Bird"
-            />
-            <div class="card-content">
-              <h3>Royal Sakalava</h3>
-              <p class="location">Antsiranana</p>
-              <a href="fiche/hebergement/Royal_Sakalava.html" class="btn-voir"
-                >Ansehen</a
-              >
-            </div>
-          </article>
-
-          <!-- Carte Palais Royal -->
-          <article class="card">
-            <img
-              src="images/hebergement/Hotel de la Poste/01.jpg"
-              alt="Palais Royal"
-            />
-            <div class="card-content">
-              <h3>Hotel de la poste</h3>
-              <p class="location">Antsiranana</p>
-              <a href="fiche/hebergement/Hotel_Poste.html" class="btn-voir"
-                >Ansehen</a
-              >
-            </div>
-          </article>
-
-          <!-- Carte Lodge Naivo -->
-          <article class="card">
-            <img
-              src="images/hebergement/Nature Lodge/01.jpg"
-              alt="Lodge Naivo"
-            />
-            <div class="card-content">
-              <h3>Nature Lodge</h3>
-              <p class="location">Joffreville</p>
-              <a href="fiche/hebergement/Nature_Lodge.html" class="btn-voir"
-                >Ansehen</a
-              >
-            </div>
-          </article>
-        </div>
-        <div class="center-btn">
-          <a href="page/hebergement.html" class="btn-main"
-            >Alle Unterkünfte ansehen</a
           >
         </div>
       </section>
@@ -200,6 +196,71 @@
         <div class="center-btn">
           <a href="page/circuit.html" class="btn-main"
             >Alle unsere Rundreisen</a
+          >
+        </div>
+      </section>
+
+      <!-- ================= SECTION BANNIERE INTERMEDIAIRE CONVERSION ================= -->
+      <section class="banner-conversion">
+        <div class="banner-conversion-content">
+          <h2>Bereit für Ihr Abenteuer in Madagaskar?</h2>
+          <p>Lassen Sie sich von unseren Experten kostenfrei und unverbindlich beraten.</p>
+          <a href="page/devis.html" class="btn-main btn-glow">Jetzt Angebot anfordern</a>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2 : HÉBERGEMENTS ================= -->
+      <section class="section-hebergements">
+        <h2>Unterkünfte</h2>
+        <div class="cards-grid">
+          <!-- Carte Blue Bird -->
+          <article class="card">
+            <img
+              src="images/hebergement/Royal Sakalava/01.jpg"
+              alt="Blue Bird"
+            />
+            <div class="card-content">
+              <h3>Royal Sakalava</h3>
+              <p class="location">Antsiranana</p>
+              <a href="fiche/hebergement/Royal_Sakalava.html" class="btn-voir"
+                >Ansehen</a
+              >
+            </div>
+          </article>
+
+          <!-- Carte Palais Royal -->
+          <article class="card">
+            <img
+              src="images/hebergement/Hotel de la Poste/01.jpg"
+              alt="Palais Royal"
+            />
+            <div class="card-content">
+              <h3>Hotel de la poste</h3>
+              <p class="location">Antsiranana</p>
+              <a href="fiche/hebergement/Hotel_Poste.html" class="btn-voir"
+                >Ansehen</a
+              >
+            </div>
+          </article>
+
+          <!-- Carte Lodge Naivo -->
+          <article class="card">
+            <img
+              src="images/hebergement/Nature Lodge/01.jpg"
+              alt="Lodge Naivo"
+            />
+            <div class="card-content">
+              <h3>Nature Lodge</h3>
+              <p class="location">Joffreville</p>
+              <a href="fiche/hebergement/Nature_Lodge.html" class="btn-voir"
+                >Ansehen</a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="center-btn">
+          <a href="page/hebergement.html" class="btn-main"
+            >Alle Unterkünfte ansehen</a
           >
         </div>
       </section>
@@ -330,7 +391,7 @@
       <section class="section-apropos">
         <div class="apropos-container">
           <div class="apropos-logo">
-            <img src="images/logo/logo.png" alt="Mada Discovery Logo Groβ" />
+            <img src="images/logo/logo.png" alt="Mada Discovery Logo Groß" />
           </div>
           <div class="apropos-text">
             <p>
@@ -396,39 +457,38 @@
       </section>
     </main>
 
-    <!-- ================= FOOTER & CONTACT ================= -->
     <!-- ================= FOOTER STANDARD ================= -->
-<footer class="footer-standard">
-  <div class="footer-container">
-    <!-- Col 1 : À propos / Logo -->
-    <div class="footer-col">
-      <img src="images/logo/logo2.png" alt="Mada Discovery Logo" class="footer-logo">
-      <p class="footer-desc">
-        Ihr Tor zu einem authentischen Madagaskar. Maßgeschneiderte Reisen, Rundreisen, Unterkünfte und unvergessliche Erlebnisse.
-      </p>
-    </div>
+    <footer class="footer-standard">
+      <div class="footer-container">
+        <!-- Col 1 : À propos / Logo -->
+        <div class="footer-col">
+          <img src="images/logo/logo2.png" alt="Mada Discovery Logo" class="footer-logo">
+          <p class="footer-desc">
+            Ihr Tor zu einem authentischen Madagaskar. Maßgeschneiderte Reisen, Rundreisen, Unterkünfte und unvergessliche Erlebnisse.
+          </p>
+        </div>
 
-    <!-- Col 2 : Liens rapides -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="page/destination.html">Reiseziele</a></li>
-        <li><a href="page/hebergement.html">Unterkünfte</a></li>
-        <li><a href="page/activite.html">Aktivitäten</a></li>
-        <li><a href="page/circuit.html">Rundreisen</a></li>
-        <li><a href="page/restaurant.html">Restaurants</a></li>
-        <li><a href="page/apropos.html">Über uns</a></li>
-      </ul>
-    </div>
+        <!-- Col 2 : Liens rapides -->
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="page/destination.html">Reiseziele</a></li>
+            <li><a href="page/hebergement.html">Unterkünfte</a></li>
+            <li><a href="page/activite.html">Aktivitäten</a></li>
+            <li><a href="page/circuit.html">Rundreisen</a></li>
+            <li><a href="page/restaurant.html">Restaurants</a></li>
+            <li><a href="page/apropos.html">Über uns</a></li>
+          </ul>
+        </div>
 
-    <!-- Col 3 : Contact & Devis -->
-    <div class="footer-col">
-      <h3>Kontakt</h3>
-      <p class="footer-contact-item">
-        <i class="fas fa-map-marker-alt"></i> Madagaskar
-      </p>
-      <p class="footer-contact-item">
-        <i class="fab fa-whatsapp"></i> WhatsApp:  <a
+        <!-- Col 3 : Contact & Devis -->
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i> Madagaskar
+          </p>
+          <p class="footer-contact-item">
+            <i class="fab fa-whatsapp"></i> WhatsApp:  <a
               href="https://wa.me/261374844889"
               target="_blank"
               rel="noopener noreferrer"
@@ -438,21 +498,22 @@
           <p class="footer-contact-item">
             <i class="fas fa-envelope"></i> E-Mail:
             <a href="mailto:madadiscovery34@gmail.com"
-              >madadiscovery34@gmail.com</a>
-      </p>
-      <div class="footer-action">
-        <a href="page/devis.html" class="btn-main">Angebot anfordern</a>
+              >madadiscovery34@gmail.com</a
+            >
+          </p>
+          <div class="footer-action">
+            <a href="page/devis.html" class="btn-main">Angebot anfordern</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Copyright -->
-  <div class="footer-bottom">
-    <p>&copy; 2026 Mada Discovery. Alle Rechte vorbehalten.</p>
-  </div>
-</footer>
-
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mada Discovery. Alle Rechte vorbehalten.</p>
+      </div>
+    </footer>
     
     <script src="js/script.js" defer></script>
+    <script src="js/index.js" defer></script>
   </body>
 </html>
